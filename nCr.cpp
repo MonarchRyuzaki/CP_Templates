@@ -42,6 +42,18 @@ vi sieve(int n) {int*arr = new int[n + 1](); for(int i=0; i<=n; i++) arr[i] = i;
 vi phi_1_to_n(int n) {vi phi(n+1); for(int i=0; i<=n; i++) phi[i] = i; for (int i = 2; i <= n; i++) if (phi[i] == i) {for (int j = i; j <= n; j += i) phi[j] -= phi[j]/i;} return phi;}
 
 /* OM NAMAH SHIVAY */
+int ncr(int n, int r, vi &fact, vi &ifact) {
+    return mod_mul(fact[n], mod_mul(ifact[r], ifact[n-r], MOD), MOD);
+}
+
+int ncr(int n, int r){
+    double ans = 1;
+    for (int i=1; i<=r; i++){
+        ans = mod_mul(ans, n-i+1/i, MOD);
+    }
+    return ans;
+}
+
 void precompute_ncr(){
     int n = 10;
     vi fact(n+1), ifact(n+1);
@@ -52,15 +64,10 @@ void precompute_ncr(){
         ifact[i] = mod_mul(ifact[i+1], i+1, MOD);
     }
     // 10c6
-    int ans = mod_mul(fact[10], mod_mul(ifact[6], ifact[4], MOD), MOD); 
+    int ans = ncr(10, 4, fact, ifact); 
 }
 
-void ncr(int n, int r){
-    int ans = 1;
-    for (int i=1; i<=r; i++){
-        ans = mod_mul(ans, n-i+1/i, MOD);
-    }
-}
+
 
 void solve(){
     
