@@ -26,4 +26,4 @@ public:
             size[ult_v] += size[ult_u];            
         }
     }
-}
+};
