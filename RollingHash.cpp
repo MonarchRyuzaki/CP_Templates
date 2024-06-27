@@ -25,7 +25,8 @@ public:
         }
     }
     
-    // For Palindrome reverse
+    // For Palindrome reverse (l, r) -> normal & (n - 1 - r, n - 1 - l) -> in reversed string
+    // Example lelo easy hai
     pair<ll, ll> get(ll l, ll r) { // O(1)
         l++; r++;
         ll hash1 = (hash[r].first - (hash[l - 1].first * power[r - l + 1].first) % M + M) % M;
