@@ -2,6 +2,7 @@
 using namespace std;
 
 // TESTED ON STRING MATCHING CSES
+// QUERY (N + Q)
 class Hash {
 private:
     using ll = long long;
