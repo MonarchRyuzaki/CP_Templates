@@ -8,6 +8,9 @@ public:
         srcNode = a; edgeWt = b; destNode = c;
     } 
 };
+// WORKS FOR UNDIRECTED AS WELL AS DIRECTED GRAPHS
+// WORKS WITH NEGATIVE EDGES
+// DOES NOT WORK WITH NEGATIVE CYCLE
 vector<int> bellmanFord(int src) {
     int n = 10;
     vector<Edge> edges;
