@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// ALYWAS WORKS EXCEPT WHEN -ve Wt and -ve Cycle
 void dijkstra() {
     int n, m; cin >> n >> m;
     vector<vector<pair<int, int>>> adj(n + 1);
