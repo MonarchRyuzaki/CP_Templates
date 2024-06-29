@@ -3,6 +3,8 @@ using namespace std;
 
 // TESTED ON STRING MATCHING CSES
 // QUERY (N + Q)
+// int x = h.ff * (1e9 + 21) + h.ss;
+// Use above Logic in case of TLE
 class Hash {
 private:
     using ll = long long;
