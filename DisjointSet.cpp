@@ -11,12 +11,12 @@ public:
             size[i] = 1;
         }
     }
-    int findUltParent(int node) {
+    int getLeader(int node) {
         if (node == parent[node]) return node;
-        return parent[node] = findUltParent(parent[node]);
+        return parent[node] = getLeader(parent[node]);
     }
-    void unionBySize(int u, int v) {
-        int ult_u = findUltParent(u), ult_v = findUltParent(v);
+    void merge(int u, int v) {
+        int ult_u = getLeader(u), ult_v = getLeader(v);
         if (ult_u == ult_v) return;
         if (size[ult_v] < size[ult_u]) {
             parent[ult_v] = ult_u;
