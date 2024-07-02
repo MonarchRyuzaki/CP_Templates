@@ -2,6 +2,8 @@
 using namespace std;
 
 // ALYWAS WORKS EXCEPT WHEN -ve Wt and -ve Cycle
+
+// TC: O((V+E) log V)
 void dijkstra() {
     int n, m; cin >> n >> m;
     vector<vector<pair<int, int>>> adj(n + 1);
