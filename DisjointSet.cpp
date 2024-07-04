@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// No of CC = No of unique Leaders (ds.getLeader(i) == i)
 class DisjointSet {
     vector<int> parent, size;
 public:
