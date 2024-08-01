@@ -11,6 +11,7 @@ void dfs(int node, int parent, vector<vector<int>> &adj, vector<int> &dp, vector
     }
 }
 
+// Rerooting can be done only if we can reverse the operation. If we cant reverse, like dp[cur] = max(dp[child]) + 1, we need to store dp[child] for every node, O(n) in that case
 void changeRoot(int newRoot, int oldRoot, vector<int> &dp, vector<int> &sub) {
     dp[oldRoot] -= dp[newRoot] + sub[newRoot];
     sub[oldRoot] -= sub[newRoot];
