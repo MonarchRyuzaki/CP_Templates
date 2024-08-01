@@ -57,6 +57,7 @@ private:
 public:
     BinaryLifting(int n, const vector<vector<int>>& adj)
         : n(n), adj(adj) {
+        // 2 ^ log N = N (max N Nodes can be there)
         maxPower = log2(n) + 7;
         level.resize(n);
         parent.assign(maxPower, vector<int>(n, -1));
