@@ -2,6 +2,7 @@
 using namespace std;
 
 // No of CC = No of unique Leaders (ds.getLeader(i) == i)
+// Rectangle Sides and circles can also be taken as nodes (Any non node thing can be taken as nodes as long as we can come up with a relation how it interacts)
 class DisjointSet {
     vector<int> parent, size;
 public:
