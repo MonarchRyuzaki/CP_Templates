@@ -8,6 +8,8 @@ using namespace std;
 #define vvvi vector<vector<vector<int>>>
 #define sz(a) (int)a.size()
 
+// Prolem : Digit Sum (S) -> Atcoder Educational DP
+
 int countNumbers(string &n, int index, bool isPrefixSame, int sum, int d, vvvi &dp) {
     if (index == sz(n)) {
         if (sum % d == 0) return 1;
