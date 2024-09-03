@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define int long long
+
 void dfs(int node, int parent, vector<vector<int>> &adj, vector<int> &dp, vector<int> &sub) {
     for (auto child: adj[node]) {
         if (child != parent) {
@@ -31,7 +33,7 @@ void dfsToReroot(int node, int parent, vector<vector<int>> &adj, vector<int> &an
     }
 }
 
-int main() {
+signed main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
  
     int n;
